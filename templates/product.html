@@ -1,0 +1,26 @@
+<div class="card mb-3">
+    {% if item.cover_image %}
+    <img src="{{ item.cover_image.url }}" alt="Card image" style="width: 250px; height: 250px;">
+    {% endif %}
+      <div class="card-body">
+        <p class="card-text">
+          <a href="{% url 'product_detail' item.slug %}">
+          {{ item.title }}
+        </p>
+        </a>
+      </div>
+          
+    <div class="card-body">
+        <span>
+            <span>{{ item.price }} TL</span>
+          
+								<button type="submit" class="btn btn-outline-success rounded-0" data-toggle="modal"
+									data-target="#enrollModal">
+									<span>Sepete Ekle</span>
+								</button>
+
+        </span>
+    </div>
+  
+</div>
+        
